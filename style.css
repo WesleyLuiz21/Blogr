@@ -79,6 +79,7 @@ p {
     font-size: 1.2rem;
     font-family: 'Overpass','Courier New', Courier, monospace;
     font-weight: 300;
+    color: var(--darkgrayblue);
 
 }
 h1 {
@@ -202,28 +203,22 @@ nav ul li {
     position: relative;
     left: 200px;
     overflow-x: hidden;
-
+}
+#img4mobile {
+    display: none;
 }
 
 /* ------------------------------ Third Section ----------------------------- */
 
 .section3 {
-    background:  linear-gradient(90deg, var(--darkgrayblue2), var(--darkdesatured));
+    background:  url(./../images/bg-pattern-circles.svg),
+    linear-gradient(90deg, var(--darkgrayblue2), var(--darkdesatured));
+    background-repeat: no-repeat;
+    background-size: 110rem, 100%;
     border-radius: 0 10rem 0 10rem;
+    background-position: left -25rem top -61rem, left;
     height: 500px;
     overflow: visible;
-}
-.sec3back {
-    width: 100%;
-    height: 500px;
-    background: url('./images/bg-pattern-circles.svg');
-    background-repeat: no-repeat;
-    background-position:left;
-    background-size: 1300px;
-    background-position-y: -650px ;
-    background-position-x: -250px;
-    overflow-y: hidden;
-    position: absolute;
 }
 
 .divsec3 {
@@ -232,9 +227,13 @@ nav ul li {
     overflow: visible;
     align-items: center;
 }
-.textsec3 > h2, .textsec3 > p  {
+.textsec3 > h2 {
     color: var(--wht);
 }
+.textsec3 > p {
+    color: var(--grayblue);
+}
+
 #phones {
     width: 43rem;
     position: relative;
@@ -259,6 +258,9 @@ nav ul li {
     right: 200px;
     overflow-x: hidden;
 }
+#img5mobile {
+    display: none;
+}
 /* ------------------------------ Footer  ----------------------------- */
 footer {
     background-color: var(--darkblueblk);
@@ -269,7 +271,7 @@ footer {
     margin: 0 auto;
     grid-template-columns: repeat(4, 1fr);
 }
-.footertext {
+.footertext p {
     color: white;
 }
 
@@ -306,6 +308,12 @@ footer a {
 
 /* ------------------------------ Media Queries  ----------------------------- */
 @media (max-width: 750px) {
+    h1 {
+        font-size: 2.4rem;
+    }
+    h3 {
+        font-size: 1.3rem;
+    }
     .hero {
         background-position: center;
     }
@@ -319,14 +327,26 @@ footer a {
     .divsec2 {
        flex-direction: column-reverse;
     }
-    #img4 {
+    #img4, #img5 {
        position: static;
+       display: none;
+    }
+    #img4mobile, #img5mobile {
+        display: block;
     }
     .divsec3 {
         flex-direction: column;
     }
+    .textsec3  {
+        width: 85%;
+        position: relative;
+        bottom: 140px;
+        
+    }
     .section3 {
         height: auto;
+        background-position: center top calc(-50vw + 80%), left;
+        background-size: 160%, 100%;
     }
     .sec3back {
         height: 700px;

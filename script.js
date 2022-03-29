@@ -19,4 +19,5 @@ $(document).ready(() => {
             $('.header').removeClass("scrolled");
         }
       };
+
 });
