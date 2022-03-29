@@ -1,0 +1,368 @@
+html {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    line-height: 1.35;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+section {
+    overflow-x: hidden;
+}
+/* ----------------------------- Color variables -------------------------- */
+
+:root {
+    --lightred: hsl(356, 100%, 66%);
+    --red2:hsl(355, 100%, 74%);  /*hover bdg*/
+    --darkblue: hsl(208, 49%, 24%) /* headings*/
+
+    /* neutral colors */
+    --whtcolor: white; /* text */
+    --grayblue: hsl(240, 2%, 79%); /* footer text */
+    --darkgrayblue: hsl(207, 13%, 34%); /* body copy*/
+    --darkblueblk: hsl(240, 10%, 16%); /* footer bgd*/
+    --wht: white;
+
+    /* gradient */
+    --lightred2: hsl(13, 100%, 72%);
+    --red3: hsl(353, 100%, 62%);
+    --darkgrayblue2: hsl(237, 17%, 21%); /*body*/
+    --darkdesatured: hsl(237, 23%, 32%); /*body*/
+}
+/* -------------------------- Universal Class Selectors -------------------- */
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+.grid {
+    display: grid;
+}
+.relative {
+    display: relative;
+}
+.wid80 {
+     width: 80%;
+}
+.rotate {
+    animation: arrowanim 200ms both;
+}
+.scrolled {
+    background:  var(--lightred);
+}
+.bold {
+    font-family: 'Ubuntu', 'Courier New', Courier, monospace;
+    font-weight: 600;
+    margin-bottom: 3rem;
+}
+
+/* ------------------------------ Universal Attributes ----------------------------- */
+ nav a, .herodiv a {
+    text-decoration: none;
+    font-family: 'Ubuntu', 'Courier New', Courier, monospace;
+    font-weight: 700;
+    font-size: 1rem;
+}
+h1, h3, a {
+    color: var(--wht);
+}
+p {
+    font-size: 1.2rem;
+    font-family: 'Overpass','Courier New', Courier, monospace;
+    font-weight: 300;
+
+}
+h1 {
+    margin: 1rem 0px;
+    font-size: 4rem;
+    font-family:  'Overpass',Arial, Helvetica, sans-serif;
+}
+h2 {
+    font-size: 2rem;
+    font-family: 'Overpass',Arial, Helvetica, sans-serif;
+}
+h3 {
+    font-family: 'Ubuntu','Courier New', Courier, monospace;
+    margin: 0px;
+    font-size: 1.7rem;
+    font-weight: 400;
+}
+li {
+    font-family: 'Overpass',Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    padding-right: 10px;
+    color: var(--wht);
+    cursor: pointer;
+}
+ul {
+    padding-inline-start: 0px;
+}
+
+ 
+
+/* ------------------------------ Header/Nav ----------------------------- */
+header {
+    width: 100%;
+    justify-content: center;
+    padding: 40px 0px;
+    position: fixed;
+    transition: 500ms;
+    z-index: 10;
+}
+nav {
+    justify-content: space-between;
+}
+#logoimg {
+    width: auto;
+    height: auto;
+}
+nav ul li {
+    list-style: none;
+    display: inline;
+    padding: 10px 10px;
+}
+.left-nav {
+    position: relative;
+    right: 200px;
+}
+.left-nav, .right-nav {
+    gap: 3rem;
+}
+.navdrop {
+    font-size: 1.3rem;
+}
+.dropdown1{
+    display: none;
+    position: absolute;
+    background-color: var(--wht);
+    padding: 20px;
+}
+.dropdown1 ul li {
+    display: block;
+}
+.dropdown1 a {
+    color: black;
+}
+/* ------------------------------ Hero Section----------------------------- */
+.hero {
+    background-image: url('./images/bg-pattern-intro-desktop.svg'), linear-gradient(90deg, var(--lightred2), var(--red3));
+    border-radius: 0 0 0 10rem;
+    background-position: left;
+    
+}
+.herodiv {
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 200px 0px;
+}
+.btndiv {
+    padding: 40px;
+    justify-content: center;
+    gap: 20px;
+}
+/* ------------------------------ Second Section ----------------------------- */
+.container2 {
+    margin: 0 auto; 
+    padding: 120px 0px;
+}
+.container2 > h2 {
+    text-align: center;
+}
+.container2 h3, h2 {
+    color: var(--darkgrayblue2);
+}
+.divsec2 {
+    align-items: center;
+    justify-content: left;
+    font-weight: 400;
+}
+
+.imgsec2 {
+    width: 100%;
+    float: right;
+}
+.rightdivsec {
+ flex-basis: 50%;
+}
+.leftdivsec {
+    max-width: 600px;
+}
+#img4 {
+    width: 100%;
+    position: relative;
+    left: 200px;
+    overflow-x: hidden;
+
+}
+
+/* ------------------------------ Third Section ----------------------------- */
+
+.section3 {
+    background:  linear-gradient(90deg, var(--darkgrayblue2), var(--darkdesatured));
+    border-radius: 0 10rem 0 10rem;
+    height: 500px;
+    overflow: visible;
+}
+.sec3back {
+    width: 100%;
+    height: 500px;
+    background: url('./images/bg-pattern-circles.svg');
+    background-repeat: no-repeat;
+    background-position:left;
+    background-size: 1300px;
+    background-position-y: -650px ;
+    background-position-x: -250px;
+    overflow-y: hidden;
+    position: absolute;
+}
+
+.divsec3 {
+    margin: 0 auto;
+    gap: 50px;
+    overflow: visible;
+    align-items: center;
+}
+.textsec3 > h2, .textsec3 > p  {
+    color: var(--wht);
+}
+#phones {
+    width: 43rem;
+    position: relative;
+    bottom: 80px;
+}
+.textsec3 {
+    position: relative;
+    bottom: 100px;
+}
+/* ------------------------------ Fourth Section ----------------------------- */
+.sec4div {
+    margin: 0 auto;
+    justify-content: right;
+    padding: 150px 0px;
+}
+.sec4text {
+    max-width: 600px;
+}
+#img5 {
+    width: 110%;
+    position: relative;
+    right: 200px;
+    overflow-x: hidden;
+}
+/* ------------------------------ Footer  ----------------------------- */
+footer {
+    background-color: var(--darkblueblk);
+    border-top-right-radius: 10rem;
+    padding: 100px 0px;
+}
+.footercontainer {
+    margin: 0 auto;
+    grid-template-columns: repeat(4, 1fr);
+}
+.footertext {
+    color: white;
+}
+
+footer a {
+    display: block;
+    font-size: 1.2rem;
+    font-family: 'Overpass','Courier New', Courier, monospace;
+    font-weight: 300;
+    margin: 1.5rem 0rem;
+    text-decoration: none;
+
+}
+
+
+
+
+/* ------------------------------ Button Styles ----------------------------- */
+.whitebtn {
+    border-radius: 5rem;
+    border: none;
+    background-color: white;
+    padding: 15px 25px;
+    color: var(--lightred);
+}
+.btnborder {
+    border-radius: 5rem;
+    border: 2px solid white;
+    padding: 13px 27px;
+}
+.active {
+    display: block;
+}
+
+
+/* ------------------------------ Media Queries  ----------------------------- */
+@media (max-width: 750px) {
+    .hero {
+        background-position: center;
+    }
+    .herodiv, .container2, .divsec3, .sec4div, .footercontainer {
+        width: 95%;
+        text-align: center;
+    }
+    .btndiv {
+        padding: 40px 0px;
+    }
+    .divsec2 {
+       flex-direction: column-reverse;
+    }
+    #img4 {
+       position: static;
+    }
+    .divsec3 {
+        flex-direction: column;
+    }
+    .section3 {
+        height: auto;
+    }
+    .sec3back {
+        height: 700px;
+        background-size: 841px;
+        background-position-y: -270px;
+        background-position-x: -155px;
+    }
+    #phones {
+        max-width: 400px;
+        bottom: 130px;
+        padding-top: 50px;
+    }
+    .sec4div {
+        flex-direction: column;
+    }
+    #img5 {
+        position: static;
+        width: 100%;
+    }
+    .footercontainer {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 20px;
+        text-align: center;
+    }
+    .left-nav, .right-nav {
+        display: none;
+    }
+}
+
+/* ------------------------------ Keyframes   ----------------------------- */
+@keyframes  arrowanim {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(180deg);
+    }
+};
