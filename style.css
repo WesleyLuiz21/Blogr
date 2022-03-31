@@ -16,7 +16,7 @@ body {
     overflow-x: hidden;
 }
 section {
-    overflow-x: hidden;
+    overflow: hidden;
 }
 /* ----------------------------- Color variables -------------------------- */
 
@@ -131,24 +131,26 @@ nav ul li {
     display: inline;
     padding: 10px 10px;
 }
-.left-nav {
-    position: relative;
-    right: 200px;
-}
+
+
 .left-nav, .right-nav {
     gap: 3rem;
 }
 .navdrop {
     font-size: 1.3rem;
 }
-.dropdown1{
+.dropdown1 {
     display: none;
     position: absolute;
     background-color: var(--wht);
-    padding: 20px;
+    padding: 1.5rem;
+    box-shadow: 0 1rem 3rem 0 rgba(0, 0, 0, 0.15);
+    border-radius: 1rem;
+    font-family:'Ubuntu','Courier New', Courier, monospace; 
+    color: var(--darkgrayblue);
 }
 .dropdown1 ul li {
-    display: block;
+    display: block !important;
 }
 .dropdown1 a {
     color: black;
@@ -174,7 +176,7 @@ nav ul li {
 /* ------------------------------ Second Section ----------------------------- */
 .container2 {
     margin: 0 auto; 
-    padding: 120px 0px;
+    padding: 180px 0px;
 }
 .container2 > h2 {
     text-align: center;
@@ -186,6 +188,7 @@ nav ul li {
     align-items: center;
     justify-content: left;
     font-weight: 400;
+    gap: 50px;
 }
 
 .imgsec2 {
@@ -198,11 +201,15 @@ nav ul li {
 .leftdivsec {
     max-width: 600px;
 }
+
 #img4 {
-    width: 100%;
+    /*width: 100%;
     position: relative;
     left: 200px;
-    overflow-x: hidden;
+    overflow-x: hidden; */
+    width: min(100%, 70rem);
+    transform: scale(1.4) translateX(calc(10vw + 7%));
+    overflow: auto;
 }
 #img4mobile {
     display: none;
@@ -211,13 +218,13 @@ nav ul li {
 /* ------------------------------ Third Section ----------------------------- */
 
 .section3 {
-    background:  url(./../images/bg-pattern-circles.svg),
+    background:  url('./../images/bg-pattern-circles.svg'),
     linear-gradient(90deg, var(--darkgrayblue2), var(--darkdesatured));
     background-repeat: no-repeat;
     background-size: 110rem, 100%;
     border-radius: 0 10rem 0 10rem;
     background-position: left -25rem top -61rem, left;
-    height: 500px;
+    height: 400px;
     overflow: visible;
 }
 
@@ -235,28 +242,40 @@ nav ul li {
 }
 
 #phones {
-    width: 43rem;
     position: relative;
     bottom: 80px;
+    transform: scale(1.05) translateY(10px);
+    
 }
 .textsec3 {
     position: relative;
     bottom: 100px;
 }
 /* ------------------------------ Fourth Section ----------------------------- */
+.container3 {
+    margin: 0 auto;
+    padding: 180px 0px;
+}
 .sec4div {
     margin: 0 auto;
+    align-items: center;
     justify-content: right;
-    padding: 150px 0px;
+    font-weight: 400;
+    gap: 50px;
 }
 .sec4text {
     max-width: 600px;
 }
 #img5 {
-    width: 110%;
+   /* width: 110%;
     position: relative;
     right: 200px;
-    overflow-x: hidden;
+    overflow-x: hidden; */
+    transform: scale(1.3);
+    overflow: auto;
+    width: min(100%, 70rem);
+    transform: scale(1.4) translateX(calc(-10vw + -7%));
+    overflow: auto;
 }
 #img5mobile {
     display: none;
@@ -324,15 +343,41 @@ footer a {
     .btndiv {
         padding: 40px 0px;
     }
-    .divsec2 {
-       flex-direction: column-reverse;
-    }
     #img4, #img5 {
        position: static;
        display: none;
     }
     #img4mobile, #img5mobile {
         display: block;
+    }
+   
+    .sec4div {
+        flex-direction: column;
+    }
+    #img5 {
+        position: static;
+        width: 100%;
+    }
+    .footercontainer {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 20px;
+        text-align: center;
+    }
+}
+@media (max-width: 1330px) {
+    .divsec2 {
+        flex-direction: column-reverse;
+    }
+    .sec4div {
+         flex-direction: column;
+    }
+    #img4, #img5 {
+        position: static;
+        display: none;
+    }
+    #img4mobile, #img5mobile {
+         display: block;
     }
     .divsec3 {
         flex-direction: column;
@@ -359,19 +404,8 @@ footer a {
         bottom: 130px;
         padding-top: 50px;
     }
-    .sec4div {
-        flex-direction: column;
-    }
-    #img5 {
-        position: static;
-        width: 100%;
-    }
-    .footercontainer {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        gap: 20px;
-        text-align: center;
-    }
+}
+@media (max-width: 940px) {
     .left-nav, .right-nav {
         display: none;
     }

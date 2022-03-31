@@ -3,14 +3,17 @@ $(document).ready(() => {
         scrollFunction();
     };
 
-    let $navDropC = $('#drop1');
-    let $navDropC2 = $('#drop2')
+    let $navDropC = $('.navdrop');
     $navDropC.on('click', event => {
-        $(event.currentTarget).find('div').toggle();
+        $(event.currentTarget).find('ul').toggle();
+        $(event.currentTarget).find('li').css('display', 'block');
+        $(event.currentTarget).find('img').toggleClass('rotate');
+    
+    }).on('mouseleave', event => {
+        $(event.currentTarget).find('ul').hide();
+        $(event.currentTarget).find('img').removeClass('rotate');
     });
-    $navDropC2.on('click', event => {
-        $(event.currentTarget).find('div').toggle();
-    });
+ 
     
     function scrollFunction() {
         if (document.body.scrollTop > 90 || document.documentElement.scrollTop > 90) {
@@ -18,6 +21,6 @@ $(document).ready(() => {
         } else {
             $('.header').removeClass("scrolled");
         }
-      };
+    };
 
 });

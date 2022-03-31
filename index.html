@@ -19,41 +19,32 @@
           <header class="flex header">
               <nav class="flex wid80">
                 <img src="./images/logo.svg" id="logoimg"  alt="Blogr-logo">
-                  <div class="left-nav flex">
-                    <ul>
+                    <ul class="left-nav flex">
                         <li class="navdrop" id="drop1">Product <img class="arrow" src="./images/icon-arrow-light.svg">
-                            <div class="dropdown1">
-                                <ul>
-                                    <li><a href="#">Overview</a></li>
-                                    <li><a href="#">Pricing</a></li>
-                                    <li><a href="#">Marketplace</a></li>
-                                    <li><a href="#">Features</a></li>
-                                    <li><a href="#"></a>Integrations</li>
-                                </ul>
-                            </div>
+                            <ul class="dropdown1" id="dropd1">
+                                <li><a href="#">Overview</a></li>
+                                <li><a href="#">Pricing</a></li>
+                                <li><a href="#">Marketplace</a></li>
+                                <li><a href="#">Features</a></li>
+                                <li><a href="#"></a>Integrations</li>
+                            </ul>
                         </li>
-                
                         <li class="navdrop" id="drop2">Company <img class="arrow" src="./images/icon-arrow-light.svg">
-                            <div class="dropdown1">
-                                <ul>
-                                    <li><a href="#">About</a></li>
-                                    <li><a href="#">Team</a></li>
-                                    <li><a href="#">Blog</a></li>
-                                    <li><a href="#">Carrers</a></li>
-                                </ul>
-                            </div>
+                            <ul class="dropdown1" id="dropd2">
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Team</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Carrers</a></li>
+                            </ul>
                         </li>
                         <li class="navdrop">Connect <img class="arrow" src="./images/icon-arrow-light.svg">
-                            <div class="dropdown1">
-                                <ul>
-                                    <li><a href="#">Contact</a></li>
-                                    <li><a href="#">Newsletter</a></li>
-                                    <li><a href="#">LinkedIn</a></li>
-                                </ul>
-                            </div>
+                            <ul class="dropdown1">
+                                <li><a href="#">Contact</a></li>
+                                <li><a href="#">Newsletter</a></li>
+                                <li><a href="#">LinkedIn</a></li>
+                            </ul>
                         </li>
                     </ul>
-                  </div>
                   <div class="right-nav flex">
                     <a href="#">Login</a>
                     <a href="#" class="whitebtn">Sign Up</a>
@@ -86,8 +77,10 @@
                             <p>Flexible content management enables users to easily move through posts. Increase the usability of your blog 
                                 by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.</p>
                       </div>
-                      <img id="img4" src="./images/illustration-editor-desktop.svg" alt="editor-desktop">
-                      <img id="img4mobile" src="./images/illustration-editor-mobile.svg" alt="editor-mobile">
+                      <picture>
+                        <img id="img4" src="./images/illustration-editor-desktop.svg" alt="editor-desktop">
+                        <img id="img4mobile" src="./images/illustration-editor-mobile.svg" alt="editor-mobile">
+                      </picture>
                   </div>
               </div>
           </section>
@@ -104,20 +97,24 @@
               </div>
           </section>
           <section class="section4">
-              <div class="flex wid80 sec4div">
-                <img src="./images/illustration-laptop-desktop.svg" id="img5">
-                <img src="./images/illustration-laptop-mobile.svg" id="img5mobile">
-                  <div class="sec4text">
-                      <h2>Free, open, simple</h2>
-                      <p>Blogr is a free and open source application backed by a large community of helpful developers. It supports 
-                        features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, 
-                        and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.</p>
-                        <br>
-                        <br>
-                      <h2>Powerful tooling</h2>
-                      <p>Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but
-                        capable of producing even the most complicated sites.</p>
-                  </div>
+              <div class="wid80 container3">
+              <div class=" flex sec4div">
+                <picture>
+                    <img src="./images/illustration-laptop-desktop.svg" id="img5">
+                    <img src="./images/illustration-laptop-mobile.svg" id="img5mobile">
+                   </picture>
+                      <div class="sec4text">
+                          <h2>Free, open, simple</h2>
+                          <p>Blogr is a free and open source application backed by a large community of helpful developers. It supports 
+                            features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, 
+                            and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.</p>
+                            <br>
+                            <br>
+                          <h2>Powerful tooling</h2>
+                          <p>Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but
+                            capable of producing even the most complicated sites.</p>
+                      </div>
+              </div>
                  
               </div>
           </section>
