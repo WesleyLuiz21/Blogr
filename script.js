@@ -23,4 +23,23 @@ $(document).ready(() => {
         }
     };
 
+    /* hamburguer btn */
+    var flag = 0;
+    let $hamburguer = $('#hamburguer');
+
+
+
+   $hamburguer.on('click', function() {
+        if(flag == 0) {
+            $(this).attr('src', 'images/icon-close.svg');
+            $('nav').addClass('active');
+            flag = 1;
+          /*  $('.navcontainer').css('display', 'block'); */
+        } else if(flag == 1) {
+          $(this).attr('src', './images/icon-hamburger.svg');
+          $('nav').removeClass('active');
+          flag = 0;
+         /* $('.navcontainer').css('display', 'none'); */
+        }
+    }); 
 });

@@ -64,6 +64,15 @@ section {
     font-weight: 600;
     margin-bottom: 3rem;
 }
+.brabo {
+    display: flex;
+}
+.none {
+    display: none;
+}
+.block {
+    display: block;
+}
 
 /* ------------------------------ Universal Attributes ----------------------------- */
  nav a, .herodiv a {
@@ -120,8 +129,19 @@ header {
     z-index: 10;
 }
 nav {
+    grid-template-columns: 1fr 4fr;
+    align-items: center;
+}
+.btnav {
+    background: none;
+    border: none;
+    display: none;
+}
+.navcontainer {
+    gap: 40px;
     justify-content: space-between;
 }
+
 #logoimg {
     width: auto;
     height: auto;
@@ -315,6 +335,13 @@ footer a {
     padding: 15px 25px;
     color: var(--lightred);
 }
+.whitebtn2 {
+    border-radius: 5rem;
+    border: none;
+    background-color: white;
+    padding: 15px 25px;
+    color: var(--lightred);
+}
 .btnborder {
     border-radius: 5rem;
     border: 2px solid white;
@@ -400,14 +427,78 @@ footer a {
         background-position-x: -155px;
     }
     #phones {
-        max-width: 400px;
+        max-width: 365px;
         bottom: 130px;
-        padding-top: 50px;
     }
 }
 @media (max-width: 940px) {
-    .left-nav, .right-nav {
+    .navcontainer {
         display: none;
+        position: absolute;
+        flex-direction: column;
+        top: 126px;
+        background-color: var(--wht);
+        padding: 50px;
+        position: absolute; 
+        left: 0; 
+        right: 0; 
+        margin-left: auto; 
+        margin-right: auto; 
+        width: 90%;
+        text-align: center;
+        border-radius: 10px;
+        box-shadow: 0 1rem 3rem 0 rgba(0, 0, 0, 0.15);
+    }
+    .navcontainer ul li  {
+        display: block;
+        color: var(--darkblueblk);
+    }
+    #login {
+        color: var(--darkblue) !important;
+    }
+    .whitebtn2 {
+        color: var(--wht);
+        background: linear-gradient(90deg, var(--lightred2), var(--red3));
+        width: 150px;
+    }
+    .left-nav, .right-nav {
+        display: block;
+    }
+    .right-nav {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        gap: 1rem;
+        justify-content: center;
+    }
+    .left-nav {
+        border-bottom: 2px solid var(--grayblue);
+        padding-bottom: 20px;
+    }
+    .navdrop {
+        padding: 15px 0px;
+    }
+    .arrow {
+        fill: red;
+    }
+    .btnav {
+        display: block;
+    }
+    nav {
+        display: flex !important;
+        justify-content: space-between;
+    }
+    nav.active .navcontainer {
+        display: block;
+    }
+    .dropdown1 {
+        position: static;
+        background-color: rgb(216, 216, 216);
+        box-shadow: none;
+        border-radius: 10px;
+        margin: 15px 0px;
+    }
+    .dropdown1 li > a {
+        color: var(--darkgrayblue);
     }
 }
 

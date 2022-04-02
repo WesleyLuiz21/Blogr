@@ -17,39 +17,46 @@
       <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
       <body>
           <header class="flex header">
-              <nav class="flex wid80">
-                <img src="./images/logo.svg" id="logoimg"  alt="Blogr-logo">
-                    <ul class="left-nav flex">
-                        <li class="navdrop" id="drop1">Product <img class="arrow" src="./images/icon-arrow-light.svg">
-                            <ul class="dropdown1" id="dropd1">
-                                <li><a href="#">Overview</a></li>
-                                <li><a href="#">Pricing</a></li>
-                                <li><a href="#">Marketplace</a></li>
-                                <li><a href="#">Features</a></li>
-                                <li><a href="#"></a>Integrations</li>
-                            </ul>
-                        </li>
-                        <li class="navdrop" id="drop2">Company <img class="arrow" src="./images/icon-arrow-light.svg">
-                            <ul class="dropdown1" id="dropd2">
-                                <li><a href="#">About</a></li>
-                                <li><a href="#">Team</a></li>
-                                <li><a href="#">Blog</a></li>
-                                <li><a href="#">Carrers</a></li>
-                            </ul>
-                        </li>
-                        <li class="navdrop">Connect <img class="arrow" src="./images/icon-arrow-light.svg">
-                            <ul class="dropdown1">
-                                <li><a href="#">Contact</a></li>
-                                <li><a href="#">Newsletter</a></li>
-                                <li><a href="#">LinkedIn</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                  <div class="right-nav flex">
-                    <a href="#">Login</a>
-                    <a href="#" class="whitebtn">Sign Up</a>
-                  </div>
-              </nav>
+              <nav class="grid wid80">
+                <a href="#">
+                    <img src="./images/logo.svg" id="logoimg"  alt="Blogr-logo">
+               </a>
+               <button class="btnav">
+                <img id="hamburguer" src="./images/icon-hamburger.svg">
+              </button>
+                <div class="flex navcontainer" >
+                        <ul class="left-nav navbt flex">
+                            <li class="navdrop" id="drop1">Product <img class="arrow" src="./images/icon-arrow-light.svg">
+                                <ul class="dropdown1" id="dropd1">
+                                    <li><a href="#">Overview</a></li>
+                                    <li><a href="#">Pricing</a></li>
+                                    <li><a href="#">Marketplace</a></li>
+                                    <li><a href="#">Features</a></li>
+                                    <li><a href="#">Integrations</a></li>
+                                </ul>
+                            </li>
+                            <li class="navdrop" id="drop2">Company <img class="arrow" src="./images/icon-arrow-light.svg">
+                                <ul class="dropdown1" id="dropd2">
+                                    <li><a href="#">About</a></li>
+                                    <li><a href="#">Team</a></li>
+                                    <li><a href="#">Blog</a></li>
+                                    <li><a href="#">Carrers</a></li>
+                                </ul>
+                            </li>
+                            <li class="navdrop">Connect <img class="arrow" src="./images/icon-arrow-light.svg">
+                                <ul class="dropdown1">
+                                    <li><a href="#">Contact</a></li>
+                                    <li><a href="#">Newsletter</a></li>
+                                    <li><a href="#">LinkedIn</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                      <div class="right-nav navbt flex">
+                        <a href="#" id="login">Login</a>
+                        <a href="#" class="whitebtn2">Sign Up</a>
+                      </div>
+               </div>
+             </nav>
           </header>
           <section class="hero">
               <div class="herodiv">
